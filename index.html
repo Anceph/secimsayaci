@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>CS:GO 10 Year Countdown</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-</head>
-<p id="cd"></p>
-
-<script>
-    var cdDate = new Date("Aug 21, 2022 00:00:00").getTime();
-    var x = setInterval(function () {
-        var now = new Date().getTime();
-        var d = cdDate - now;
-
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        document.getElementById("cd").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-
-        if (d < 0) {
-            clearInterval(x);
-            document.getElementById("cd").innerHTML = "HAPPY 10 YEAR ANNIVERSARY!";
+    <style>
+        p {
+          text-align: center;
+          font-size: 60px;
+          margin-top: 0px;
         }
-    }, 1000);
-</script>
+    </style>
+</head>
+<body>
+    <p id="cd"></p>
 
+    <script>
+        var cdDate = new Date("Aug 21, 2022 00:00:00").getTime();
+        var x = setInterval(function() {
+            var now = new Date().getTime();
+            var d = cdDate - now;
+
+            var days = Math.floor(d / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((d % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((d % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((d % (1000 * 60)) / 1000);
+
+            document.getElementById("cd").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+            if (d < 0 ){
+                clearInterval(x);
+                document.getElementById("cd").innerHTML = "HAPPY 10 YEAR ANNIVERSARY!";
+            }
+        }, 1000);
+    </script>
+</body>
 </html>
