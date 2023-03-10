@@ -3,13 +3,14 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>CS:GO 10 Year Anniversary Countdown</title>
+    <title>seçime kalan süre</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
 </head>
 <body>
+    <p style="text-align:center;font-size:30px">seçime</p>
     <p id="cd" style="text-align:center;font-size:75px;margin-top:350px"></p>
-    <p style="text-align:center;font-size:30px">left for 10 Year Anniversary!</p>
+    <p style="text-align:center;font-size:30px">kaldı</p>
 
     <script>
         var cdDate = new Date("Aug 21, 2022 00:00:00").getTime();
@@ -22,11 +23,11 @@
             var minutes = Math.floor((d % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((d % (1000 * 60)) / 1000);
 
-            document.getElementById("cd").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+            document.getElementById("cd").innerHTML = days + "gün " + hours + "saat " + minutes + "dakika " + seconds + "saniye ";
 
             if (d < 0 ){
                 clearInterval(x);
-                document.getElementById("cd").innerHTML = "HAPPY 10 YEAR ANNIVERSARY!";
+                document.getElementById("cd").innerHTML = "hadi sandıklara";
             }
         }, 1000);
     </script>
