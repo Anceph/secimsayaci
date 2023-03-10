@@ -1,3 +1,3 @@
-# CS:GO's 10 Year Anniversary
+# 14 mayıs 2023'e kalan süre
 
-<a href="https://anceph.github.io/csgo10yearanniversary/">click here</a>
+<a href="https://anceph.github.io/secimsayaci/">tıkla</a>
