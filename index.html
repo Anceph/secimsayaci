@@ -23,7 +23,7 @@
             var minutes = Math.floor((d % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((d % (1000 * 60)) / 1000);
 
-            document.getElementById("cd").innerHTML = days + "gün " + hours + "saat " + minutes + "dakika " + seconds + "saniye ";
+            document.getElementById("cd").innerHTML = days + " gün " + hours + " saat " + minutes + " dakika " + seconds + " saniye ";
 
             if (d < 0 ){
                 clearInterval(x);
